@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cilt Bakım Rehberi</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Cilt Bakım Rutinini Bulun</h1>
+    <p>Cilt tipinize uygun bakım önerilerini almak için aşağıdaki soruları yanıtlayın.</p>
+  </header>
+  
+  <section id="quiz">
+    <form id="skinForm">
+      <div class="question">
+        <label for="skinType">Cilt tipiniz nedir?</label>
+        <select id="skinType" name="skinType">
+          <option value="kuru">Kuru</option>
+          <option value="yağlı">Yağlı</option>
+          <option value="karma">Karma</option>
+          <option value="normal">Normal</option>
+          <option value="hassas">Hassas</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="skinConcerns">Cildinizde hangi sorunları daha sık yaşıyorsunuz?</label>
+        <select id="skinConcerns" name="skinConcerns">
+          <option value="akne">Akne (Sivilce)</option>
+          <option value="kuru">Kuru, pul pul dökülen cilt</option>
+          <option value="gözenek">Genişlemiş gözenekler</option>
+          <option value="kırışıklık">Kırışıklıklar ve ince çizgiler</option>
+          <option value="lekeler">Cilt lekeleri</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="generateRoutine()">Rutin Oluştur</button>
+    </form>
+  </section>
+
+  <section id="result" style="display:none;">
+    <h2>Önerilen Cilt Bakım Rutin</h2>
+    <div id="routineDetails"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Cilt Bakım Rehberi. Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
